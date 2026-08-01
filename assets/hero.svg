@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1">
+      <stop offset="0" stop-color="#0ea5a4" />
+      <stop offset="1" stop-color="#06b6d4" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="#f3f6f7" />
+  <rect x="80" y="120" width="1040" height="560" rx="14" fill="url(#g)" opacity="0.12" />
+  <g transform="translate(140,180)" fill="#0f1724">
+    <rect x="0" y="0" width="360" height="240" rx="8" fill="#ffffff" />
+    <rect x="400" y="0" width="360" height="240" rx="8" fill="#ffffff" />
+    <rect x="0" y="280" width="760" height="200" rx="8" fill="#ffffff" />
+  </g>
+  <text x="120" y="120" font-family="Inter, Arial" font-size="36" fill="#0f1724">Engineers on site</text>
+</svg>

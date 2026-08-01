@@ -37,7 +37,7 @@
     header{background:transparent;padding:20px 0;position:sticky;top:0;backdrop-filter:blur(6px);z-index:20}
     .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .brand{display:flex;align-items:center;gap:12px}
-    .brand-mark{width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-family:Manrope}
+    .brand-mark{width:44px;height:44px;border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center}
     .brand-name{font-weight:700;font-family:Manrope;font-size:16px}
 
     .nav-links{display:flex;gap:18px;align-items:center}
@@ -56,7 +56,7 @@
     .btn-primary{background:var(--accent);color:white}
     .btn-outline{border:1px solid #e6eef0;color:var(--text);background:transparent}
 
-    .hero-media{border-radius:14px;overflow:hidden;box-shadow:0 8px 30px rgba(16,24,40,0.06);}
+    .hero-media{border-radius:14px;overflow:hidden;box-shadow:0 8px 30px rgba(16,24,40,0.06);background:#f3f6f7}
 
     /* SERVICES */
     .services{padding:56px 0}
@@ -104,7 +104,7 @@
 <header>
   <div class="wrap nav">
     <a class="brand" href="#top">
-      <div class="brand-mark">P</div>
+      <div class="brand-mark"><img src="assets/logo.svg" alt="Pal Electrical Systems logo" width="44" height="44" onerror="this.onerror=null;this.src='assets/placeholder.svg'"></div>
       <div>
         <div class="brand-name">Pal Electrical Systems</div>
         <div style="font-size:12px;color:var(--muted)">Jaipur · Electrical, ELV & Solar</div>
@@ -127,7 +127,7 @@
       <div class="hero-copy">
         <p style="font-family:Manrope;color:var(--accent);margin:0 0 8px;font-weight:700">Trusted infrastructure partners</p>
         <h1>Building safe, sustainable and future-ready electrical systems</h1>
-        <p>Pal Electrical Systems brings design, installation and long-term support across Electrical, ELV, IT &amp; Networking, Fire Safety, Security and Solar — one accountable team for your project.</p>
+        <p>Pal Electrical Systems brings design, installation and long-term support across Electrical, ELV, IT &amp; Networking, Fire Safety, Security and Solar — one accountable team for your projects.</p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#contact">Start a Project</a>
           <a class="btn btn-outline" href="#projects">View Projects</a>
@@ -135,11 +135,10 @@
       </div>
 
       <div class="hero-media" aria-hidden="false">
-        <!-- Responsive hero image (external stock image used so no repo assets required). If you want local images I can add an assets/ folder in the branch. -->
+        <!-- Local SVG hero image used as reliable local asset. -->
         <picture>
-          <source type="image/webp" srcset="https://images.unsplash.com/photo-1526403224743-8f2c1f3a3b6b?q=80&w=800&auto=format&fit=crop&dpr=1 800w, https://images.unsplash.com/photo-1526403224743-8f2c1f3a3b6b?q=80&w=1600&auto=format&fit=crop&dpr=2 1600w" sizes="(max-width:640px) 100vw, 420px">
-          <source type="image/jpeg" srcset="https://images.unsplash.com/photo-1526403224743-8f2c1f3a3b6b?q=80&w=800&auto=format&fit=crop&dpr=1 800w, https://images.unsplash.com/photo-1526403224743-8f2c1f3a3b6b?q=80&w=1600&auto=format&fit=crop&dpr=2 1600w" sizes="(max-width:640px) 100vw, 420px">
-          <img src="https://images.unsplash.com/photo-1526403224743-8f2c1f3a3b6b?q=80&w=1200&auto=format&fit=crop&dpr=1" alt="Engineers inspecting electrical panel" loading="lazy">
+          <source type="image/svg+xml" srcset="assets/hero.svg">
+          <img src="assets/hero.svg" alt="Engineers inspecting an electrical panel" loading="lazy" width="1200" height="800" onerror="this.onerror=null;this.src='assets/placeholder.svg';">
         </picture>
       </div>
     </div>
@@ -196,8 +195,8 @@
         <!-- Project 1 -->
         <article class="proj-card">
           <picture>
-            <source type="image/webp" srcset="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=400&auto=format&fit=crop&dpr=1 400w, https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=800&auto=format&fit=crop&dpr=2 800w" sizes="(max-width:640px) 100vw, 33vw">
-            <img src="https://images.unsplash.com/photo-1509395176047-4a66953fd231?q=80&w=800&auto=format&fit=crop&dpr=1" alt="Hotel electrical installation" loading="lazy">
+            <source type="image/svg+xml" srcset="assets/project-1.svg">
+            <img src="assets/project-1.svg" alt="Hotel electrical installation" loading="lazy" width="800" height="500" onerror="this.onerror=null;this.src='assets/placeholder.svg';">
           </picture>
           <div class="proj-meta">
             <h4>ITC Kufri</h4>
@@ -208,8 +207,8 @@
         <!-- Project 2 -->
         <article class="proj-card">
           <picture>
-            <source type="image/webp" srcset="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=400&auto=format&fit=crop&dpr=1 400w, https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=800&auto=format&fit=crop&dpr=2 800w" sizes="(max-width:640px) 100vw, 33vw">
-            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=800&auto=format&fit=crop&dpr=1" alt="Data center cabling" loading="lazy">
+            <source type="image/svg+xml" srcset="assets/project-2.svg">
+            <img src="assets/project-2.svg" alt="Data center cabling" loading="lazy" width="800" height="500" onerror="this.onerror=null;this.src='assets/placeholder.svg';">
           </picture>
           <div class="proj-meta">
             <h4>Enterprise Network</h4>
@@ -220,8 +219,8 @@
         <!-- Project 3 -->
         <article class="proj-card">
           <picture>
-            <source type="image/webp" srcset="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=400&auto=format&fit=crop&dpr=1 400w, https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800&auto=format&fit=crop&dpr=2 800w" sizes="(max-width:640px) 100vw, 33vw">
-            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=800&auto=format&fit=crop&dpr=1" alt="Solar rooftop panels" loading="lazy">
+            <source type="image/svg+xml" srcset="assets/project-3.svg">
+            <img src="assets/project-3.svg" alt="Solar rooftop panels" loading="lazy" width="800" height="500" onerror="this.onerror=null;this.src='assets/placeholder.svg';">
           </picture>
           <div class="proj-meta">
             <h4>Rooftop Solar</h4>
@@ -268,7 +267,7 @@
           <button class="btn btn-primary" id="sendBtn" type="button">Send Request</button>
           <button class="btn btn-outline" type="reset">Reset</button>
         </div>
-        <p style="font-size:13px;color:var(--muted);margin-top:12px">By clicking Send Request your default email client will open — if you'd like submissions collected centrally I can wire a serverless endpoint in a follow-up change.</p>
+        <p style="font-size:13px;color:var(--muted);margin-top:12px">By clicking Send Request your default email client will open — if you'd like submissions collected centrally I can wire a server endpoint or a Netlify form.</p>
       </form>
     </div>
   </section>
