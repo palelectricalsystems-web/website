@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+  <rect width="800" height="500" fill="#fbfbfd" />
+  <rect x="40" y="40" width="720" height="420" rx="10" fill="#eef6fb" />
+  <text x="80" y="120" font-family="Inter, Arial" font-size="28" fill="#0f1724">Data center cabling</text>
+</svg>
