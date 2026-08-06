@@ -6,6 +6,15 @@
   <title>Pal Electrical Systems - Electrical & ELV Solutions | Jaipur</title>
   <meta name="description" content="Pal Electrical Systems - Integrated electrical, ELV, IT, fire safety, security and solar solutions in Jaipur.">
   
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLVE2RKSCB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VLVE2RKSCB');
+  </script>
+  
   <!-- EmailJS -->
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
   
@@ -180,11 +189,13 @@
       text-align: center;
       box-shadow: 0 2px 12px rgba(0,0,0,0.08);
       transition: all 0.3s;
+      border: 1px solid #e5e7eb;
     }
 
     .service-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      border-color: #0ea5a4;
     }
 
     .service-icon {
@@ -201,6 +212,7 @@
     .service-card p {
       color: #666;
       line-height: 1.8;
+      font-size: 15px;
     }
 
     /* Projects Section */
@@ -236,6 +248,8 @@
       justify-content: center;
       color: white;
       font-size: 14px;
+      text-align: center;
+      padding: 20px;
     }
 
     .project-content {
@@ -317,6 +331,11 @@
     .contact-item-text a {
       color: #0ea5a4;
       text-decoration: none;
+      font-weight: 600;
+    }
+
+    .contact-item-text a:hover {
+      text-decoration: underline;
     }
 
     /* Contact Form */
@@ -324,6 +343,7 @@
       background: #f9fafb;
       padding: 40px;
       border-radius: 8px;
+      border: 1px solid #e5e7eb;
     }
 
     .contact-form h3 {
@@ -353,7 +373,7 @@
       border-radius: 5px;
       font-size: 14px;
       font-family: inherit;
-      transition: border-color 0.3s;
+      transition: all 0.3s;
     }
 
     .form-group input:focus,
@@ -480,6 +500,7 @@
 
       .footer-links {
         gap: 15px;
+        flex-direction: column;
       }
     }
   </style>
@@ -542,32 +563,32 @@
       <div class="service-card">
         <div class="service-icon">⚡</div>
         <h3>Electrical Systems</h3>
-        <p>Power distribution, LT/HT panels, lighting design, earthing, protection systems and emergency backup</p>
+        <p>Power distribution, LT/HT panels, lighting design, earthing, protection systems and emergency backup for critical infrastructure</p>
       </div>
       <div class="service-card">
         <div class="service-icon">🔌</div>
         <h3>ELV Systems</h3>
-        <p>Structured cabling, access control, PA/VA systems, BMS integration and low-voltage automation</p>
+        <p>Structured cabling, access control, PA/VA systems, BMS integration and low-voltage automation for modern buildings</p>
       </div>
       <div class="service-card">
         <div class="service-icon">🌐</div>
         <h3>IT & Networking</h3>
-        <p>Enterprise LAN/WiFi, fiber backbones, network switching and cloud connectivity solutions</p>
+        <p>Enterprise LAN/WiFi, fiber backbones, network switching, security infrastructure and cloud connectivity solutions</p>
       </div>
       <div class="service-card">
         <div class="service-icon">🚨</div>
         <h3>Fire & Life Safety</h3>
-        <p>Addressable fire detection, voice evacuation systems and emergency lighting to global standards</p>
+        <p>Addressable fire detection, voice evacuation systems, emergency lighting and life safety planning to global standards</p>
       </div>
       <div class="service-card">
         <div class="service-icon">📹</div>
         <h3>Security Solutions</h3>
-        <p>CCTV systems, access control, perimeter security and integrated threat detection</p>
+        <p>CCTV systems, access control, perimeter security, monitoring centers and integrated threat detection</p>
       </div>
       <div class="service-card">
         <div class="service-icon">☀️</div>
         <h3>Solar Energy</h3>
-        <p>Commercial rooftop solar, energy optimization, net-metering support and battery storage</p>
+        <p>Commercial rooftop solar, energy optimization, net-metering support and battery storage systems</p>
       </div>
     </div>
   </div>
@@ -579,27 +600,27 @@
     <h2 class="section-title">Featured Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
-        <div class="project-image">Luxury Resort Infrastructure</div>
+        <div class="project-image">🏨 ITC Kufri Resort - Complete luxury resort infrastructure</div>
         <div class="project-content">
           <span class="project-tag">Hospitality</span>
           <h4>ITC Kufri Resort</h4>
-          <p>Complete electrical and ELV systems including backup power, lighting design and access control for luxury property</p>
+          <p>Complete electrical and ELV systems for a luxury hill-station property including backup power, lighting design and access control</p>
         </div>
       </div>
       <div class="project-card">
-        <div class="project-image">Enterprise Network Infrastructure</div>
+        <div class="project-image">🏢 Enterprise Network Hub - Multi-building infrastructure</div>
         <div class="project-content">
           <span class="project-tag">Enterprise</span>
           <h4>Enterprise Network Hub</h4>
-          <p>Fiber backbone infrastructure and enterprise-grade switching for multi-building commercial campus</p>
+          <p>Fiber backbone infrastructure and enterprise-grade switching for multi-building commercial campus with 99.99% uptime</p>
         </div>
       </div>
       <div class="project-card">
-        <div class="project-image">Renewable Energy Installation</div>
+        <div class="project-image">☀️ Rooftop Solar - 500kW installation with net-metering</div>
         <div class="project-content">
           <span class="project-tag">Renewable Energy</span>
           <h4>Rooftop Solar Installation</h4>
-          <p>Commercial rooftop solar with energy management system and net-metering setup for 500kW installation</p>
+          <p>Commercial rooftop solar with energy management system and net-metering setup for a 500kW installation</p>
         </div>
       </div>
     </div>
@@ -674,7 +695,7 @@
 
         <div class="form-group">
           <label for="message">Project Details *</label>
-          <textarea id="message" name="message" required></textarea>
+          <textarea id="message" name="message" required placeholder="Tell us about your project scope, timeline, and requirements..."></textarea>
         </div>
 
         <button type="submit" class="form-button" id="submitBtn">Send Inquiry</button>
@@ -754,7 +775,7 @@
       .catch((error) => {
         // Error
         console.error('Error:', error);
-        formMessage.textContent = '✗ Error sending message. Please try again or contact us directly.';
+        formMessage.textContent = '✗ Error sending message. Please try again or contact us directly at +91 78769 01001';
         formMessage.classList.remove('success');
         formMessage.classList.add('error');
         
