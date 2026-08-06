@@ -5,305 +5,1064 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Pal Electrical Systems — Trusted Electrical & ELV Partners | Jaipur</title>
   <meta name="description" content="Pal Electrical Systems — integrated engineering for Electrical, ELV, IT, Fire & Life Safety, Security and Solar. Jaipur-based.">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VLVE2RKSCB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-VLVE2RKSCB');
-</script>
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLVE2RKSCB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-VLVE2RKSCB');
+  </script>
+  
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Manrope:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    :root{
-      --bg:#fbfcfd;
-      --card:#ffffff;
-      --muted:#6b7280;
-      --text:#0f1724;
-      --accent:#0ea5a4; /* teal */
-      --accent-2:#06b6d4; /* cyan */
-      --radius:10px;
-      --max-width:1100px;
+    :root {
+      --primary: #0ea5a4;
+      --primary-dark: #0d9195;
+      --secondary: #06b6d4;
+      --accent: #f59e0b;
+      --success: #10b981;
+      --danger: #ef4444;
+      --bg-light: #f9fafb;
+      --bg-white: #ffffff;
+      --text-dark: #1f2937;
+      --text-muted: #6b7280;
+      --border: #e5e7eb;
+      --shadow-sm: 0 1px 2px 0 rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+      --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1);
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --max-width: 1280px;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%;}
-    body{
-      margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;line-height:1.45;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    a{color:inherit}
-    img{max-width:100%;display:block;height:auto}
-
-    .wrap{max-width:var(--max-width);margin:0 auto;padding:28px}
-
-    /* Header */
-    header{background:transparent;padding:20px 0;position:sticky;top:0;backdrop-filter:blur(6px);z-index:20}
-    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .brand-mark{width:44px;height:44px;border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center}
-    .brand-name{font-weight:700;font-family:Manrope;font-size:16px}
-
-    .nav-links{display:flex;gap:18px;align-items:center}
-    .nav-links a{font-size:14px;color:var(--muted);text-decoration:none}
-    .cta{background:var(--accent);color:white;padding:10px 16px;border-radius:8px;font-weight:600;text-decoration:none}
-
-    /* HERO */
-    .hero{
-      display:grid;grid-template-columns:1fr;align-items:center;gap:28px;padding:64px 0 56px;background:linear-gradient(180deg,rgba(14,165,164,0.03),transparent 60%);
+    html, body {
+      height: 100%;
     }
-    .hero-inner{display:grid;grid-template-columns:1fr 420px;gap:36px;align-items:center}
-    .hero-copy h1{font-family:Manrope;font-size:clamp(28px,4vw,44px);margin:0 0 12px}
-    .hero-copy p{color:var(--muted);margin:0 0 20px}
-    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600}
-    .btn-primary{background:var(--accent);color:white}
-    .btn-outline{border:1px solid #e6eef0;color:var(--text);background:transparent}
 
-    .hero-media{border-radius:14px;overflow:hidden;box-shadow:0 8px 30px rgba(16,24,40,0.06);background:#f3f6f7}
-
-    /* SERVICES */
-    .services{padding:56px 0}
-    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .svc{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.04)}
-    .svc h3{margin:0 0 8px;font-size:16px}
-    .svc p{margin:0;color:var(--muted);font-size:14px}
-
-    /* PROJECTS */
-    .projects{padding:56px 0}
-    .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .proj-card{background:var(--card);border-radius:12px;overflow:hidden;box-shadow:0 8px 24px rgba(16,24,40,0.04)}
-    .proj-meta{padding:14px}
-    .proj-meta h4{margin:0 0 6px;font-size:15px}
-    .proj-meta p{margin:0;color:var(--muted);font-size:13px}
-
-    /* CONTACT */
-    .contact{padding:56px 0}
-    .contact-grid{display:grid;grid-template-columns:1fr 420px;gap:28px}
-    .card{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 8px 30px rgba(16,24,40,0.04)}
-    .field{display:flex;flex-direction:column;margin-bottom:12px}
-    label{font-size:12px;color:var(--muted);margin-bottom:6px}
-    input[type="text"],input[type="email"],select,textarea{padding:10px;border:1px solid #e6eef0;border-radius:8px;font-size:14px}
-    textarea{min-height:110px}
-
-    footer{padding:36px 0;color:var(--muted);font-size:14px}
-
-    /* Responsive */
-    @media (max-width:980px){
-      .hero-inner{grid-template-columns:1fr}
-      .contact-grid{grid-template-columns:1fr}
-      .services-grid{grid-template-columns:repeat(2,1fr)}
-      .proj-grid{grid-template-columns:repeat(2,1fr)}
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
-    @media (max-width:640px){
-      .services-grid{grid-template-columns:1fr}
-      .proj-grid{grid-template-columns:1fr}
-      .nav-links{display:none}
-      .wrap{padding:18px}
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* HEADER & NAVIGATION */
+    header {
+      background: var(--bg-white);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 16px 0;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 18px;
+      color: var(--text-dark);
+      font-family: 'Manrope', sans-serif;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 20px;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .nav-menu a {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color 0.3s ease;
+    }
+
+    .nav-menu a:hover {
+      color: var(--primary);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: var(--radius-md);
+      font-weight: 600;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      box-shadow: 0 4px 12px rgba(14, 165, 164, 0.3);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(14, 165, 164, 0.4);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 2px solid var(--border);
+      color: var(--text-dark);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    .btn-secondary {
+      background: var(--bg-light);
+      color: var(--text-dark);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: var(--border);
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: linear-gradient(135deg, rgba(14, 165, 164, 0.08), rgba(6, 182, 212, 0.04));
+      padding: 80px 0 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(6, 182, 212, 0.1), transparent);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-text h1 {
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-text > p {
+      font-size: 16px;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .hero-image {
+      position: relative;
+      height: 450px;
+      background: linear-gradient(135deg, var(--bg-light), var(--bg-white));
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* STATS SECTION */
+    .stats {
+      background: var(--bg-white);
+      padding: 40px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .stat-card {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .stat-number {
+      font-family: 'Manrope', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 14px;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* SERVICES SECTION */
+    .services {
+      padding: 80px 0;
+      background: var(--bg-white);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header p {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .section-header h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .section-header .subtitle {
+      font-size: 16px;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .service-card {
+      background: var(--bg-light);
+      padding: 32px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .service-card:hover {
+      background: var(--bg-white);
+      border-color: var(--primary);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+
+    .service-icon {
+      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-size: 32px;
+    }
+
+    .service-card h3 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* PROJECTS SECTION */
+    .projects {
+      padding: 80px 0;
+      background: var(--bg-light);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .project-card {
+      background: var(--bg-white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: all 0.3s ease;
+    }
+
+    .project-card:hover {
+      box-shadow: var(--shadow-xl);
+      transform: translateY(-6px);
+    }
+
+    .project-image {
+      width: 100%;
+      height: 240px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 14px;
+      overflow: hidden;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 24px;
+    }
+
+    .project-tag {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 4px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .project-card h4 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .project-card p {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+      padding: 80px 0;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,165.3C384,171,480,149,576,149.3C672,149,768,171,864,176C960,181,1056,171,1152,160C1248,149,1344,139,1392,133.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .cta-section h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      font-size: 16px;
+      margin-bottom: 32px;
+      opacity: 0.95;
+    }
+
+    /* CONTACT SECTION */
+    .contact {
+      padding: 80px 0;
+      background: var(--bg-white);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-info h2 {
+      font-family: 'Manrope', sans-serif;
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+
+    .contact-info > p {
+      font-size: 16px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      line-height: 1.7;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .contact-item {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .contact-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .contact-text strong {
+      display: block;
+      font-size: 14px;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+
+    .contact-text p {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+
+    .contact-text a {
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    .contact-form {
+      background: var(--bg-light);
+      padding: 40px;
+      border-radius: var(--radius-lg);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      font-family: inherit;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(14, 165, 164, 0.1);
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--text-dark);
+      color: white;
+      padding: 48px 0 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-col h4 {
+      font-family: 'Manrope', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+    }
+
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-col a {
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .footer-col a:hover {
+      color: var(--secondary);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .hero-content,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid,
+      .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .header-inner {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-menu {
+        display: none;
+      }
+
+      .hero {
+        padding: 40px 0;
+      }
+
+      .services-grid,
+      .projects-grid,
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+      }
+
+      .contact-form {
+        padding: 24px;
+      }
+
+      .form-actions {
+        flex-direction: column;
+      }
+
+      .form-actions .btn {
+        width: 100%;
+      }
     }
   </style>
 </head>
 <body>
 
+<!-- HEADER -->
 <header>
-  <div class="wrap nav">
-    <a class="brand" href="#top">
-      <div class="brand-mark"><img src="assets/logo.svg" alt="Pal Electrical Systems logo" width="44" height="44" onerror="this.onerror=null;this.src='assets/placeholder.svg'"></div>
-      <div>
-        <div class="brand-name">Pal Electrical Systems</div>
-        <div style="font-size:12px;color:var(--muted)">Jaipur · Electrical, ELV & Solar</div>
+  <div class="container">
+    <div class="header-inner">
+      <div class="logo">
+        <div class="logo-icon">P</div>
+        <div>
+          <div>Pal Electrical</div>
+          <div style="font-size: 11px; color: var(--text-muted); font-weight: 400;">Jaipur · Trusted Partners</div>
+        </div>
       </div>
-    </a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div>
-      <a class="cta" href="#contact">Request Quote</a>
+      <nav class="nav-menu">
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="btn btn-primary">Get Quote</a>
     </div>
   </div>
 </header>
 
-<main>
-  <section class="hero">
-    <div class="wrap hero-inner">
-      <div class="hero-copy">
-        <p style="font-family:Manrope;color:var(--accent);margin:0 0 8px;font-weight:700">Trusted infrastructure partners</p>
-        <h1>Building safe, sustainable and future-ready electrical systems</h1>
-        <p>Pal Electrical Systems brings design, installation and long-term support across Electrical, ELV, IT &amp; Networking, Fire Safety, Security and Solar — one accountable team for your projects.</p>
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Advanced Electrical & ELV Solutions for Modern Infrastructure</h1>
+        <p>We design, install, and maintain integrated systems for electrical, low-voltage, networking, fire safety, security, and solar energy. Trusted by hospitality, commercial, and residential projects across India.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#contact">Start a Project</a>
-          <a class="btn btn-outline" href="#projects">View Projects</a>
+          <a href="#contact" class="btn btn-primary">Start Your Project</a>
+          <a href="#projects" class="btn btn-outline">View Our Work</a>
         </div>
       </div>
-
-      <div class="hero-media" aria-hidden="false">
-        <!-- Local SVG hero image used as reliable local asset. -->
-        <picture>
-          <source type="image/svg+xml" srcset="assets/hero.svg">
-          <img src="assets/hero.svg" alt="Engineers inspecting an electrical panel" loading="lazy" width="1200" height="800" onerror="this.onerror=null;this.src='assets/placeholder.svg';">
-        </picture>
+      <div class="hero-image">
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDYwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkMSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzBFQTVBNDtzdG9wLW9wYWNpdHk6MSIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMwNkI2RDQ7c3RvcC1vcGFjaXR5OjEiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjYwMCIgaGVpZ2h0PSI0MDAiIGZpbGw9IiNGOUZBRkIiLz48cmVjdCB4PSI1MCIgeT0iNTAiIHdpZHRoPSI1MDAiIGhlaWdodD0iMzAwIiBmaWxsPSJ1cmwoI2dyYWQxKSIgcng9IjE2Ii8+PHBhdGggZD0iTSAxNTAgMjAwIEwgMjQwIDEwMCBMIDMzMCAxNjAgTCA0MjAgOTAgTCA1MDAgMTgwIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjQiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjE1MCIgY3k9IjIwMCIgcj0iOCIgZmlsbD0id2hpdGUiLz48Y2lyY2xlIGN4PSIyNDAiIGN5PSIxMDAiIHI9IjgiIGZpbGw9IndoaXRlIi8+PGNpcmNsZSBjeD0iMzMwIiBjeT0iMTYwIiByPSI4IiBmaWxsPSJ3aGl0ZSIvPjxjaXJjbGUgY3g9IjQyMCIgY3k9IjkwIiByPSI4IiBmaWxsPSJ3aGl0ZSIvPjxjaXJjbGUgY3g9IjUwMCIgY3k9IjE4MCIgcj0iOCIgZmlsbD0id2hpdGUiLz48cmVjdCB4PSI3MCIgeT0iMzIwIiB3aWR0aD0iNDYwIiBoZWlnaHQ9IjIiIGZpbGw9IiMwRUE1QTQiIG9wYWNpdHk9IjAuMyIvPjxyZWN0IHg9IjcwIiB5PSI5MCIgd2lkdGg9IjIiIGhlaWdodD0iMjQwIiBmaWxsPSIjMEVBNUE0IiBvcGFjaXR5PSIwLjMiLz48L3N2Zz4=" alt="Electrical systems chart" />
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="services" class="services">
-    <div class="wrap">
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px">
-        <div>
-          <div style="font-size:12px;color:var(--muted);font-weight:700">What we do</div>
-          <h2 style="margin:6px 0 0">Six disciplines, delivered end-to-end</h2>
-        </div>
+<!-- STATS SECTION -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">500+</div>
+        <div class="stat-label">Projects Delivered</div>
       </div>
-
-      <div class="services-grid" aria-hidden="false">
-        <div class="svc">
-          <h3>Electrical Systems</h3>
-          <p>Power distribution, LT/HT panels, lighting design, earthing and protection for reliable operations.</p>
-        </div>
-        <div class="svc">
-          <h3>ELV Systems</h3>
-          <p>Structured cabling, access control, PA/VA, BMS and integrated low-voltage systems.</p>
-        </div>
-        <div class="svc">
-          <h3>IT &amp; Networking</h3>
-          <p>Enterprise LAN/WiFi, fiber backbones, switching and secure infrastructure design.</p>
-        </div>
-        <div class="svc">
-          <h3>Fire &amp; Life Safety</h3>
-          <p>Addressable detection, alarms, voice evacuation and emergency planning to global standards.</p>
-        </div>
-        <div class="svc">
-          <h3>Security</h3>
-          <p>CCTV, access control, perimeter security and monitoring solutions.</p>
-        </div>
-        <div class="svc">
-          <h3>Solar</h3>
-          <p>Rooftop and commercial solar with energy optimisation and net-metering support.</p>
-        </div>
+      <div class="stat-card">
+        <div class="stat-number">15+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Expert Team</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">99%</div>
+        <div class="stat-label">Client Satisfaction</div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="projects" class="projects">
-    <div class="wrap">
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px">
-        <div>
-          <div style="font-size:12px;color:var(--muted);font-weight:700">Selected work</div>
-          <h2 style="margin:6px 0 0">Projects that show what we build</h2>
-        </div>
+<!-- SERVICES SECTION -->
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-header">
+      <p>What We Deliver</p>
+      <h2>Comprehensive Infrastructure Solutions</h2>
+      <p class="subtitle">Six integrated disciplines, delivered with precision and accountability</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">⚡</div>
+        <h3>Electrical Systems</h3>
+        <p>Power distribution, LT/HT panels, lighting design, earthing, protection systems and emergency backup for critical infrastructure.</p>
       </div>
 
-      <div class="proj-grid">
-        <!-- Project 1 -->
-        <article class="proj-card">
-          <picture>
-            <source type="image/svg+xml" srcset="assets/project-1.svg">
-            <img src="assets/project-1.svg" alt="Hotel electrical installation" loading="lazy" width="800" height="500" onerror="this.onerror=null;this.src='assets/placeholder.svg';">
-          </picture>
-          <div class="proj-meta">
-            <h4>ITC Kufri</h4>
-            <p>Complete electrical and ELV systems for a hill-station hospitality property.</p>
-          </div>
-        </article>
+      <div class="service-card">
+        <div class="service-icon">🔌</div>
+        <h3>ELV Systems</h3>
+        <p>Structured cabling, access control, PA/VA systems, BMS integration and low-voltage automation for modern buildings.</p>
+      </div>
 
-        <!-- Project 2 -->
-        <article class="proj-card">
-          <picture>
-            <source type="image/svg+xml" srcset="assets/project-2.svg">
-            <img src="assets/project-2.svg" alt="Data center cabling" loading="lazy" width="800" height="500" onerror="this.onerror=null;this.src='assets/placeholder.svg';">
-          </picture>
-          <div class="proj-meta">
-            <h4>Enterprise Network</h4>
-            <p>Fiber backbone and enterprise switching for commercial campus.</p>
-          </div>
-        </article>
+      <div class="service-card">
+        <div class="service-icon">🌐</div>
+        <h3>IT & Networking</h3>
+        <p>Enterprise LAN/WiFi, fiber backbones, network switching, security infrastructure and cloud connectivity solutions.</p>
+      </div>
 
-        <!-- Project 3 -->
-        <article class="proj-card">
-          <picture>
-            <source type="image/svg+xml" srcset="assets/project-3.svg">
-            <img src="assets/project-3.svg" alt="Solar rooftop panels" loading="lazy" width="800" height="500" onerror="this.onerror=null;this.src='assets/placeholder.svg';">
-          </picture>
-          <div class="proj-meta">
-            <h4>Rooftop Solar</h4>
-            <p>Commercial rooftop solar with net-metering and energy management.</p>
-          </div>
-        </article>
+      <div class="service-card">
+        <div class="service-icon">🚨</div>
+        <h3>Fire & Life Safety</h3>
+        <p>Addressable fire detection, voice evacuation systems, emergency lighting and life safety planning to global standards.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📹</div>
+        <h3>Security Solutions</h3>
+        <p>CCTV systems, access control, perimeter security, monitoring centers and integrated threat detection.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">☀️</div>
+        <h3>Solar Energy</h3>
+        <p>Commercial rooftop solar, energy optimization, net-metering support and battery storage systems.</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="contact" class="contact">
-    <div class="wrap contact-grid">
-      <div>
-        <h2 style="margin-top:0">Get in touch</h2>
-        <p style="color:var(--muted)">Tell us about your project and we’ll follow up with next steps.</p>
+<!-- PROJECTS SECTION -->
+<section id="projects" class="projects">
+  <div class="container">
+    <div class="section-header">
+      <p>Selected Work</p>
+      <h2>Projects That Define Us</h2>
+      <p class="subtitle">Real-world implementations across hospitality, commercial and residential sectors</p>
+    </div>
 
-        <div style="margin-top:18px">
-          <div style="display:flex;gap:12px;margin-bottom:8px">
-            <strong style="font-size:14px">Phone:</strong><a href="tel:+917876901001">+91 78769 01001</a>
+    <div class="projects-grid">
+      <article class="project-card">
+        <div class="project-image">
+          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI0MCIgdmlld0JveD0iMCAwIDQwMCAyNDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkMiIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzBFQTVBNDtzdG9wLW9wYWNpdHk6MSIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMwNkI2RDQ7c3RvcC1vcGFjaXR5OjEiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyNDAiIGZpbGw9InVybCgjZ3JhZDIpIi8+PHJlY3QgeD0iNTAiIHk9IjMwIiB3aWR0aD0iMzAwIiBoZWlnaHQ9IjE4MCIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC4xIiByeD0iOCIvPjxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjI4MCIgaGVpZ2h0PSI0MCIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC4yIiByeD0iNCIvPjxyZWN0IHg9IjYwIiB5PSI5MCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC4yIiByeD0iNCIvPjxyZWN0IHg9IjEyMCIgeT0iOTAiIHdpZHRoPSI0MCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuMiIgcng9IjQiLz48cmVjdCB4PSIxODAiIHk9IjkwIiB3aWR0aD0iNDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjIiIHJ4PSI0Ii8+PHJlY3QgeD0iMjQwIiB5PSI5MCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC4yIiByeD0iNCIvPjxyZWN0IHg9IjMwMCIgeT0iOTAiIHdpZHRoPSI0MCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuMiIgcng9IjQiLz48Y2lyY2xlIGN4PSI5MCIgY3k9IjE5MCIgcj0iMTAiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNiIvPjwvc3ZnPg==" alt="Hotel electrical installation" />
+        </div>
+        <div class="project-content">
+          <span class="project-tag">Hospitality</span>
+          <h4>ITC Kufri Resort</h4>
+          <p>Complete electrical and ELV systems for a luxury hill-station property including backup power, lighting design and access control.</p>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-image">
+          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI0MCIgdmlld0JveD0iMCAwIDQwMCAyNDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkMyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzA2QjZENDtzdG9wLW9wYWNpdHk6MSIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMwRUE1QTQ7c3RvcC1vcGFjaXR5OjEiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyNDAiIGZpbGw9InVybCgjZ3JhZDMpIi8+PHBhdGggZD0iTSA2MCAxMjAgTCA2MCAxODAgTSA2MCAxNTAgTCA2MCAxODAgTSAxMDAgMTIwIEwgMTAwIDE4MCBNIDEwMCAxNTAgTCAxMDAgMTgwIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBvcGFjaXR5PSIwLjYiLz48cGF0aCBkPSJNIDE0MCAxMjAgTCAxNDAgMTgwIE0gMTQwIDE1MCBMIDE0MCAxODAgTSAxODAgMTIwIEwgMTgwIDE4MCBNIDE4MCAxNTAgTCAxODAgMTgwIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBvcGFjaXR5PSIwLjYiLz48cGF0aCBkPSJNIDIyMCAxMjAgTCAyMjAgMTgwIE0gMjIwIDE1MCBMIDIyMCAxODAgTSAyNjAgMTIwIEwgMjYwIDE4MCBNIDI2MCAxNTAgTCAyNjAgMTgwIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBvcGFjaXR5PSIwLjYiLz48cmVjdCB4PSI1MCIgeT0iNjAiIHdpZHRoPSI5MCIgaGVpZ2h0PSIzIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjgiLz48cmVjdCB4PSIxNjAiIHk9IjYwIiB3aWR0aD0iOTAiIGhlaWdodD0iMyIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC44Ii8+PHJlY3QgeD0iNTAiIHk9IjMwIiB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjEiIHJ4PSI0Ii8+PGNpcmNsZSBjeD0iNjAiIGN5PSI0NSIgcj0iNiIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC40Ii8+PGNpcmNsZSBjeD0iMzMwIiBjeT0iNDUiIHI9IjYiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNCIvPjwvc3ZnPg==" alt="Data center networking" />
+        </div>
+        <div class="project-content">
+          <span class="project-tag">Enterprise</span>
+          <h4>Enterprise Network Hub</h4>
+          <p>Fiber backbone infrastructure and enterprise-grade switching for multi-building commercial campus with 99.99% uptime.</p>
+        </div>
+      </article>
+
+      <article class="project-card">
+        <div class="project-image">
+          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI0MCIgdmlld0JveD0iMCAwIDQwMCAyNDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkNCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzEwQjk4MTtzdG9wLW9wYWNpdHk6MSIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMwRUE1QTQ7c3RvcC1vcGFjaXR5OjEiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyNDAiIGZpbGw9InVybCgjZ3JhZDQpIi8+PHJlY3QgeD0iNjAiIHk9IjUwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuOSIgcng9IjQiLz48cmVjdCB4PSIxMDQiIHk9IjUwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuOSIgcng9IjQiLz48cmVjdCB4PSIxNDgiIHk9IjUwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuOSIgcng9IjQiLz48cmVjdCB4PSIxOTIiIHk9IjUwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuOSIgcng9IjQiLz48cmVjdCB4PSIyMzYiIHk9IjUwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuOSIgcng9IjQiLz48cmVjdCB4PSI2MCIgeT0iMTAwIiB3aWR0aD0iMjA0IiBoZWlnaHQ9IjYwIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjIiIHJ4PSI4Ii8+PHJlY3QgeD0iNjAiIHk9IjEwMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjYwIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjQiIHJ4PSI4Ii8+PHJlY3QgeD0iMjI0IiB5PSIxMDAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI2MCIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC40IiByeD0iOCIvPjxwYXRoIGQ9Ik0gNjAgOTAgTCAzMjAgOTAgTSA2MCAxNzAgTCAzMjAgMTcwIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC4zIi8+PGNpcmNsZSBjeD0iOTAiIGN5PSIyMjAiIHI9IjEwIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjYiLz48Y2lyY2xlIGN4PSIxNjAiIGN5PSIyMjAiIHI9IjEwIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjYiLz48Y2lyY2xlIGN4PSIyMzAiIGN5PSIyMjAiIHI9IjEwIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjYiLz48L3N2Zz4=" alt="Solar installation" />
+        </div>
+        <div class="project-content">
+          <span class="project-tag">Renewable Energy</span>
+          <h4>Rooftop Solar Installation</h4>
+          <p>Commercial rooftop solar with energy management system and net-metering setup for a 500kW installation.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Build Something Great?</h2>
+      <p>Let's discuss your project requirements and create a solution tailored to your needs.</p>
+      <a href="#contact" class="btn" style="background: white; color: var(--primary); font-weight: 700;">Schedule a Consultation</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>Have a project in mind? We'd love to hear about it. Contact us and let's explore how we can help bring your vision to life.</p>
+
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-text">
+              <strong>Phone</strong>
+              <p><a href="tel:+917876901001">+91 78769 01001</a></p>
+            </div>
           </div>
-          <div style="display:flex;gap:12px;margin-bottom:8px">
-            <strong style="font-size:14px">Email:</strong><a href="mailto:palelectricalsystems@gmail.com">palelectricalsystems@gmail.com</a>
+
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div class="contact-text">
+              <strong>Email</strong>
+              <p><a href="mailto:palelectricalsystems@gmail.com">palelectricalsystems@gmail.com</a></p>
+            </div>
           </div>
-          <div style="display:flex;gap:12px"><strong style="font-size:14px">Location:</strong><span>Jagatpura, Jaipur, Rajasthan</span></div>
+
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-text">
+              <strong>Address</strong>
+              <p>Jagatpura, Jaipur, Rajasthan, India</p>
+            </div>
+          </div>
         </div>
       </div>
 
-      <form class="card" id="quoteForm" onsubmit="return false;" aria-label="Request a quote">
-        <div class="field"><label for="fname">Name</label><input id="fname" type="text" placeholder="Your full name" required></div>
-        <div class="field"><label for="femail">Email</label><input id="femail" type="email" placeholder="you@company.com" required></div>
-        <div class="field"><label for="fservice">Service needed</label>
-          <select id="fservice">
-            <option>Electrical Systems</option>
-            <option>ELV Systems</option>
-            <option>IT &amp; Networking</option>
-            <option>Fire &amp; Life Safety</option>
-            <option>Security Solutions</option>
-            <option>Solar Energy</option>
-            <option>Multiple / Not sure yet</option>
+      <form class="contact-form" id="contactForm" onsubmit="return false;">
+        <div class="form-group">
+          <label for="name">Your Name *</label>
+          <input type="text" id="name" placeholder="John Doe" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" placeholder="john@company.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" placeholder="+91 XXXXX XXXXX">
+        </div>
+
+        <div class="form-group">
+          <label for="service">Service Type *</label>
+          <select id="service" required>
+            <option value="">Select a service...</option>
+            <option value="Electrical Systems">Electrical Systems</option>
+            <option value="ELV Systems">ELV Systems</option>
+            <option value="IT & Networking">IT & Networking</option>
+            <option value="Fire & Life Safety">Fire & Life Safety</option>
+            <option value="Security Solutions">Security Solutions</option>
+            <option value="Solar Energy">Solar Energy</option>
+            <option value="Multiple Services">Multiple Services</option>
           </select>
         </div>
-        <div class="field"><label for="fmsg">Project details</label><textarea id="fmsg" placeholder="Property type, location and scope"></textarea></div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <button class="btn btn-primary" id="sendBtn" type="button">Send Request</button>
-          <button class="btn btn-outline" type="reset">Reset</button>
+
+        <div class="form-group">
+          <label for="project">Project Details *</label>
+          <textarea id="project" placeholder="Tell us about your project scope, timeline, and specific requirements..." required></textarea>
         </div>
-        <p style="font-size:13px;color:var(--muted);margin-top:12px">By clicking Send Request your default email client will open — if you'd like submissions collected centrally I can wire a server endpoint or a Netlify form.</p>
+
+        <div class="form-actions">
+          <button type="button" class="btn btn-primary" id="submitBtn">Send Inquiry</button>
+          <button type="reset" class="btn btn-secondary">Clear</button>
+        </div>
+
+        <p style="font-size: 12px; color: rgba(0,0,0,0.6); margin-top: 16px;">Your message will open your default email client with pre-filled details.</p>
       </form>
     </div>
-  </section>
-</main>
+  </div>
+</section>
 
+<!-- FOOTER -->
 <footer>
-  <div class="wrap" style="display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap">
-    <div>
-      <div style="font-weight:700">Pal Electrical Systems</div>
-      <div style="color:var(--muted);font-size:13px">Trusted for hospitality, commercial and residential infrastructure</div>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Electrical Systems</a></li>
+          <li><a href="#services">ELV & Automation</a></li>
+          <li><a href="#services">IT & Networking</a></li>
+          <li><a href="#services">Fire Safety</a></li>
+          <li><a href="#services">Security</a></li>
+          <li><a href="#services">Solar Energy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <ul>
+          <li><a href="tel:+917876901001">+91 78769 01001</a></li>
+          <li><a href="mailto:palelectricalsystems@gmail.com">Email Us</a></li>
+          <li><p style="margin-top: 8px; font-size: 13px; color: rgba(255,255,255,0.6);">Jagatpura, Jaipur</p></li>
+        </ul>
+      </div>
     </div>
-    <div style="color:var(--muted);font-size:13px">© <span id="year"></span> Pal Electrical Systems</div>
+
+    <div class="footer-bottom">
+      <div>&copy; <span id="year"></span> Pal Electrical Systems. All rights reserved.</div>
+      <div style="display: flex; gap: 20px;">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
   </div>
 </footer>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  // simple mailto behaviour: open user's email client with filled content
-  document.getElementById('sendBtn').addEventListener('click', function(){
-    var name = document.getElementById('fname').value.trim();
-    var email = document.getElementById('femail').value.trim();
-    var service = document.getElementById('fservice').value;
-    var msg = document.getElementById('fmsg').value.trim();
-    if(!name || !email){ alert('Please enter name and email'); return; }
-    var subject = encodeURIComponent('Quote Request — ' + service);
-    var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nService: ' + service + '\n\nProject details:\n' + msg);
-    window.location.href = 'mailto:palelectricalsystems@gmail.com?subject=' + subject + '&body=' + body;
+  // Form submission handler
+  document.getElementById('submitBtn').addEventListener('click', function() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const service = document.getElementById('service').value;
+    const project = document.getElementById('project').value.trim();
+
+    if (!name || !email || !service || !project) {
+      alert('Please fill in all required fields marked with *');
+      return;
+    }
+
+    const subject = encodeURIComponent(`Quote Request — ${service}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\n` +
+      `Email: ${email}\n` +
+      `Phone: ${phone || 'Not provided'}\n` +
+      `Service: ${service}\n\n` +
+      `Project Details:\n${project}`
+    );
+
+    window.location.href = `mailto:palelectricalsystems@gmail.com?subject=${subject}&body=${body}`;
+  });
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+      if (href !== '#') {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
   });
 </script>
 
