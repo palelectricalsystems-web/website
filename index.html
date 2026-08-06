@@ -15,6 +15,9 @@
     gtag('config', 'G-VLVE2RKSCB');
   </script>
   
+  <!-- EmailJS -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
+  
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -453,7 +456,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,165.3C384,171,480,149,576,149.3C672,149,768,171,864,176C960,181,1056,171,1152,160C1248,149,1344,139,1392,133.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,165.3C384,171,480,14[...]
       opacity: 0.5;
       pointer-events: none;
     }
@@ -593,6 +596,28 @@
     .form-actions {
       display: flex;
       gap: 12px;
+    }
+
+    .form-message {
+      padding: 12px 16px;
+      border-radius: var(--radius-md);
+      font-size: 14px;
+      margin-top: 16px;
+      display: none;
+    }
+
+    .form-message.success {
+      background: #dcfce7;
+      color: #166534;
+      border: 1px solid #bbf7d0;
+      display: block;
+    }
+
+    .form-message.error {
+      background: #fee2e2;
+      color: #991b1b;
+      border: 1px solid #fecaca;
+      display: block;
     }
 
     /* FOOTER */
@@ -754,14 +779,14 @@
     <div class="hero-content">
       <div class="hero-text">
         <h1>Advanced Electrical & ELV Solutions for Modern Infrastructure</h1>
-        <p>We design, install, and maintain integrated systems for electrical, low-voltage, networking, fire safety, security, and solar energy. Trusted by hospitality, commercial, and residential projects across India.</p>
+        <p>We design, install, and maintain integrated systems for electrical, low-voltage, networking, fire safety, security, and solar energy. Trusted by hospitality, commercial, and residentia[...]
         <div class="hero-actions">
           <a href="#contact" class="btn btn-primary">Start Your Project</a>
           <a href="#projects" class="btn btn-outline">View Our Work</a>
         </div>
       </div>
       <div class="hero-image">
-        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDYwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkMSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzBFQTVBNDtzdG9wLW9wYWNpdHk6MSIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMwNkI2RDQ7c3RvcC1vcGFjaXR5OjEiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjYwMCIgaGVpZ2h0PSI0MDAiIGZpbGw9IiNGOUZBRkIiLz48cmVjdCB4PSI1MCIgeT0iNTAiIHdpZHRoPSI1MDAiIGhlaWdodD0iMzAwIiBmaWxsPSJ1cmwoI2dyYWQxKSIgcng9IjE2Ii8+PHBhdGggZD0iTSAxNTAgMjAwIEwgMjQwIDEwMCBMIDMzMCAxNjAgTCA0MjAgOTAgTCA1MDAgMTgwIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjQiIGZpbGw9Im5vbmUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPjxjaXJjbGUgY3g9IjE1MCIgY3k9IjIwMCIgcj0iOCIgZmlsbD0id2hpdGUiLz48Y2lyY2xlIGN4PSIyNDAiIGN5PSIxMDAiIHI9IjgiIGZpbGw9IndoaXRlIi8+PGNpcmNsZSBjeD0iMzMwIiBjeT0iMTYwIiByPSI4IiBmaWxsPSJ3aGl0ZSIvPjxjaXJjbGUgY3g9IjQyMCIgY3k9IjkwIiByPSI4IiBmaWxsPSJ3aGl0ZSIvPjxjaXJjbGUgY3g9IjUwMCIgY3k9IjE4MCIgcj0iOCIgZmlsbD0id2hpdGUiLz48cmVjdCB4PSI3MCIgeT0iMzIwIiB3aWR0aD0iNDYwIiBoZWlnaHQ9IjIiIGZpbGw9IiMwRUE1QTQiIG9wYWNpdHk9IjAuMyIvPjxyZWN0IHg9IjcwIiB5PSI5MCIgd2lkdGg9IjIiIGhlaWdodD0iMjQwIiBmaWxsPSIjMEVBNUE0IiBvcGFjaXR5PSIwLjMiLz48L3N2Zz4=" alt="Electrical systems chart" />
+        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDYwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckd[...]
       </div>
     </div>
   </div>
@@ -852,7 +877,7 @@
     <div class="projects-grid">
       <article class="project-card">
         <div class="project-image">
-          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI0MCIgdmlld0JveD0iMCAwIDQwMCAyNDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkMiIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzBFQTVBNDtzdG9wLW9wYWNpdHk6MSIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMwNkI2RDQ7c3RvcC1vcGFjaXR5OjEiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyNDAiIGZpbGw9InVybCgjZ3JhZDIpIi8+PHJlY3QgeD0iNTAiIHk9IjMwIiB3aWR0aD0iMzAwIiBoZWlnaHQ9IjE4MCIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC4xIiByeD0iOCIvPjxyZWN0IHg9IjYwIiB5PSI0MCIgd2lkdGg9IjI4MCIgaGVpZ2h0PSI0MCIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC4yIiByeD0iNCIvPjxyZWN0IHg9IjYwIiB5PSI5MCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC4yIiByeD0iNCIvPjxyZWN0IHg9IjEyMCIgeT0iOTAiIHdpZHRoPSI0MCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuMiIgcng9IjQiLz48cmVjdCB4PSIxODAiIHk9IjkwIiB3aWR0aD0iNDAiIGhlaWdodD0iMTAwIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjIiIHJ4PSI0Ii8+PHJlY3QgeD0iMjQwIiB5PSI5MCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC4yIiByeD0iNCIvPjxyZWN0IHg9IjMwMCIgeT0iOTAiIHdpZHRoPSI0MCIgaGVpZ2h0PSIxMDAiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuMiIgcng9IjQiLz48Y2lyY2xlIGN4PSI5MCIgY3k9IjE5MCIgcj0iMTAiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNiIvPjwvc3ZnPg==" alt="Hotel electrical installation" />
+          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI0MCIgdmlld0JveD0iMCAwIDQwMCAyNDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhc[...]
         </div>
         <div class="project-content">
           <span class="project-tag">Hospitality</span>
@@ -863,7 +888,7 @@
 
       <article class="project-card">
         <div class="project-image">
-          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI0MCIgdmlld0JveD0iMCAwIDQwMCAyNDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkMyIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzA2QjZENDtzdG9wLW9wYWNpdHk6MSIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMwRUE1QTQ7c3RvcC1vcGFjaXR5OjEiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyNDAiIGZpbGw9InVybCgjZ3JhZDMpIi8+PHBhdGggZD0iTSA2MCAxMjAgTCA2MCAxODAgTSA2MCAxNTAgTCA2MCAxODAgTSAxMDAgMTIwIEwgMTAwIDE4MCBNIDEwMCAxNTAgTCAxMDAgMTgwIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBvcGFjaXR5PSIwLjYiLz48cGF0aCBkPSJNIDE0MCAxMjAgTCAxNDAgMTgwIE0gMTQwIDE1MCBMIDE0MCAxODAgTSAxODAgMTIwIEwgMTgwIDE4MCBNIDE4MCAxNTAgTCAxODAgMTgwIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBvcGFjaXR5PSIwLjYiLz48cGF0aCBkPSJNIDIyMCAxMjAgTCAyMjAgMTgwIE0gMjIwIDE1MCBMIDIyMCAxODAgTSAyNjAgMTIwIEwgMjYwIDE4MCBNIDI2MCAxNTAgTCAyNjAgMTgwIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBvcGFjaXR5PSIwLjYiLz48cmVjdCB4PSI1MCIgeT0iNjAiIHdpZHRoPSI5MCIgaGVpZ2h0PSIzIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjgiLz48cmVjdCB4PSIxNjAiIHk9IjYwIiB3aWR0aD0iOTAiIGhlaWdodD0iMyIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC44Ii8+PHJlY3QgeD0iNTAiIHk9IjMwIiB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjEiIHJ4PSI0Ii8+PGNpcmNsZSBjeD0iNjAiIGN5PSI0NSIgcj0iNiIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC40Ii8+PGNpcmNsZSBjeD0iMzMwIiBjeT0iNDUiIHI9IjYiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuNCIvPjwvc3ZnPg==" alt="Data center networking" />
+          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI0MCIgdmlld0JveD0iMCAwIDQwMCAyNDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhc[...]
         </div>
         <div class="project-content">
           <span class="project-tag">Enterprise</span>
@@ -874,7 +899,7 @@
 
       <article class="project-card">
         <div class="project-image">
-          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI0MCIgdmlld0JveD0iMCAwIDQwMCAyNDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkNCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3R5bGU9InN0b3AtY29sb3I6IzEwQjk4MTtzdG9wLW9wYWNpdHk6MSIgLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0eWxlPSJzdG9wLWNvbG9yOiMwRUE1QTQ7c3RvcC1vcGFjaXR5OjEiIC8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjQwMCIgaGVpZ2h0PSIyNDAiIGZpbGw9InVybCgjZ3JhZDQpIi8+PHJlY3QgeD0iNjAiIHk9IjUwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuOSIgcng9IjQiLz48cmVjdCB4PSIxMDQiIHk9IjUwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuOSIgcng9IjQiLz48cmVjdCB4PSIxNDgiIHk9IjUwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuOSIgcng9IjQiLz48cmVjdCB4PSIxOTIiIHk9IjUwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuOSIgcng9IjQiLz48cmVjdCB4PSIyMzYiIHk9IjUwIiB3aWR0aD0iMjgiIGhlaWdodD0iMjgiIGZpbGw9IiNmZmYiIG9wYWNpdHk9IjAuOSIgcng9IjQiLz48cmVjdCB4PSI2MCIgeT0iMTAwIiB3aWR0aD0iMjA0IiBoZWlnaHQ9IjYwIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjIiIHJ4PSI4Ii8+PHJlY3QgeD0iNjAiIHk9IjEwMCIgd2lkdGg9IjQwIiBoZWlnaHQ9IjYwIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjQiIHJ4PSI4Ii8+PHJlY3QgeD0iMjI0IiB5PSIxMDAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI2MCIgZmlsbD0iI2ZmZiIgb3BhY2l0eT0iMC40IiByeD0iOCIvPjxwYXRoIGQ9Ik0gNjAgOTAgTCAzMjAgOTAgTSA2MCAxNzAgTCAzMjAgMTcwIiBzdHJva2U9IiNmZmYiIHN0cm9rZS13aWR0aD0iMiIgb3BhY2l0eT0iMC4zIi8+PGNpcmNsZSBjeD0iOTAiIGN5PSIyMjAiIHI9IjEwIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjYiLz48Y2lyY2xlIGN4PSIxNjAiIGN5PSIyMjAiIHI9IjEwIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjYiLz48Y2lyY2xlIGN4PSIyMzAiIGN5PSIyMjAiIHI9IjEwIiBmaWxsPSIjZmZmIiBvcGFjaXR5PSIwLjYiLz48L3N2Zz4=" alt="Solar installation" />
+          <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjI0MCIgdmlld0JveD0iMCAwIDQwMCAyNDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhc[...]
         </div>
         <div class="project-content">
           <span class="project-tag">Renewable Energy</span>
@@ -932,7 +957,7 @@
         </div>
       </div>
 
-      <form class="contact-form" id="contactForm" onsubmit="return false;">
+      <form class="contact-form" id="contactForm">
         <div class="form-group">
           <label for="name">Your Name *</label>
           <input type="text" id="name" placeholder="John Doe" required>
@@ -972,7 +997,7 @@
           <button type="reset" class="btn btn-secondary">Clear</button>
         </div>
 
-        <p style="font-size: 12px; color: rgba(0,0,0,0.6); margin-top: 16px;">Your message will open your default email client with pre-filled details.</p>
+        <div id="formMessage" class="form-message"></div>
       </form>
     </div>
   </div>
@@ -998,71 +1023,99 @@
           <li><a href="#services">ELV & Automation</a></li>
           <li><a href="#services">IT & Networking</a></li>
           <li><a href="#services">Fire Safety</a></li>
-          <li><a href="#services">Security</a></li>
+          <li><a href="#services">Security Solutions</a></li>
           <li><a href="#services">Solar Energy</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4>Contact Info</h4>
+        <h4>Legal</h4>
         <ul>
-          <li><a href="tel:+917876901001">+91 78769 01001</a></li>
-          <li><a href="mailto:palelectricalsystems@gmail.com">Email Us</a></li>
-          <li><p style="margin-top: 8px; font-size: 13px; color: rgba(255,255,255,0.6);">Jagatpura, Jaipur</p></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Cookie Policy</a></li>
         </ul>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <div>&copy; <span id="year"></span> Pal Electrical Systems. All rights reserved.</div>
-      <div style="display: flex; gap: 20px;">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-      </div>
+      <p>&copy; 2026 Pal Electrical Systems. All rights reserved.</p>
+      <p>Trusted Electrical & ELV Partners, Jaipur</p>
     </div>
   </div>
 </footer>
 
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
+  // Initialize EmailJS
+  emailjs.init("service_pzf6m1r"); // Public key for EmailJS
 
-  // Form submission handler
-  document.getElementById('submitBtn').addEventListener('click', function() {
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const service = document.getElementById('service').value;
-    const project = document.getElementById('project').value.trim();
-
-    if (!name || !email || !service || !project) {
-      alert('Please fill in all required fields marked with *');
+  // Handle form submission
+  document.getElementById('submitBtn').addEventListener('click', function(e) {
+    e.preventDefault();
+    
+    const form = document.getElementById('contactForm');
+    const messageDiv = document.getElementById('formMessage');
+    
+    // Validate form
+    if (!form.checkValidity()) {
+      form.reportValidity();
       return;
     }
 
-    const subject = encodeURIComponent(`Quote Request — ${service}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\n` +
-      `Email: ${email}\n` +
-      `Phone: ${phone || 'Not provided'}\n` +
-      `Service: ${service}\n\n` +
-      `Project Details:\n${project}`
-    );
+    // Disable submit button
+    const submitBtn = this;
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = '0.6';
+    submitBtn.textContent = 'Sending...';
 
-    window.location.href = `mailto:palelectricalsystems@gmail.com?subject=${subject}&body=${body}`;
-  });
+    // Prepare form data
+    const formData = {
+      name: document.getElementById('name').value,
+      email: document.getElementById('email').value,
+      phone: document.getElementById('phone').value,
+      service: document.getElementById('service').value,
+      project: document.getElementById('project').value,
+      to_email: 'palelectricalsystems@gmail.com'
+    };
 
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-      if (href !== '#') {
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }
-    });
+    // Send email via EmailJS
+    emailjs.send('service_pzf6m1r', 'template_contact_form', formData)
+      .then(() => {
+        // Success
+        messageDiv.textContent = '✓ Thank you! Your inquiry has been sent successfully. We\'ll get back to you within 24 hours.';
+        messageDiv.classList.remove('error');
+        messageDiv.classList.add('success');
+        
+        // Reset form
+        form.reset();
+        
+        // Re-enable button
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '1';
+        submitBtn.textContent = 'Send Inquiry';
+
+        // Clear message after 5 seconds
+        setTimeout(() => {
+          messageDiv.classList.remove('success');
+        }, 5000);
+      })
+      .catch((error) => {
+        // Error
+        console.error('Error sending email:', error);
+        messageDiv.textContent = '✗ An error occurred while sending your inquiry. Please try again or contact us directly.';
+        messageDiv.classList.remove('success');
+        messageDiv.classList.add('error');
+        
+        // Re-enable button
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '1';
+        submitBtn.textContent = 'Send Inquiry';
+
+        // Clear message after 5 seconds
+        setTimeout(() => {
+          messageDiv.classList.remove('error');
+        }, 5000);
+      });
   });
 </script>
 
