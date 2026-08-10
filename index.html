@@ -3,794 +3,414 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pal Electrical Systems - Electrical & ELV Solutions | Jaipur</title>
-  <meta name="description" content="Pal Electrical Systems - Integrated electrical, ELV, IT, fire safety, security and solar solutions in Jaipur.">
-  
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLVE2RKSCB"></script>
+  <title>Pal Electrical Systems | Turnkey IT & ELV System Integrators</title>
+
+  <!-- Google Fonts & FontAwesome Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VLVE2RKSCB"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-VLVE2RKSCB');
   </script>
-  
-  <!-- EmailJS -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
-  
+
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+    :root {
+      --primary: #0F172A; /* Slate Navy */
+      --secondary: #2563EB; /* Bright Blue */
+      --accent: #F59E0B; /* Amber/Orange */
+      --dark-card: #1E293B;
+      --light-bg: #F8FAFC;
+      --text-main: #334155;
+      --text-light: #94A3B8;
     }
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background: #f9fafb;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+    body { color: var(--text-main); background-color: #FFFFFF; line-height: 1.6; }
 
-    header {
-      background: white;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
+    /* Top Bar */
+    .top-bar { background: var(--primary); color: #fff; padding: 8px 5%; font-size: 0.85rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1e293b; }
+    .top-bar .fsai-badge { background: #DC2626; padding: 2px 8px; border-radius: 4px; font-weight: 700; font-size: 0.75rem; letter-spacing: 0.5px; }
+    .top-bar a { color: #fff; text-decoration: none; margin-left: 15px; }
 
-    nav {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 70px;
-    }
-
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #0ea5a4;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 30px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: #333;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    .nav-links a:hover {
-      color: #0ea5a4;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
+    /* Header Navigation */
+    header { position: sticky; top: 0; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); z-index: 1000; border-bottom: 1px solid #E2E8F0; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.4rem; font-weight: 800; color: var(--primary); text-transform: uppercase; letter-spacing: -0.5px; }
+    .logo span { color: var(--secondary); }
+    nav ul { display: flex; list-style: none; gap: 25px; align-items: center; }
+    nav a { text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 0.95rem; transition: 0.2s; }
+    nav a:hover { color: var(--secondary); }
+    .btn-rfp { background: var(--secondary); color: #fff !important; padding: 10px 20px; border-radius: 6px; font-weight: 700; }
+    .btn-rfp:hover { background: #1d4ed8; }
 
     /* Hero Section */
-    .hero {
-      background: linear-gradient(135deg, #0ea5a4 0%, #06b6d4 100%);
-      color: white;
-      padding: 100px 20px;
-      text-align: center;
-    }
+    .hero { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #fff; padding: 100px 5% 80px; position: relative; overflow: hidden; }
+    .hero-content { max-width: 800px; z-index: 2; position: relative; }
+    .hero-tag { display: inline-flex; align-items: center; gap: 8px; background: rgba(37, 99, 235, 0.2); border: 1px solid var(--secondary); color: #60A5FA; padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 20px; }
+    .hero h1 { font-size: 3rem; font-weight: 800; line-height: 1.2; margin-bottom: 20px; }
+    .hero p { font-size: 1.15rem; color: var(--text-light); margin-bottom: 35px; max-width: 650px; }
+    .hero-btns { display: flex; gap: 15px; flex-wrap: wrap; }
+    .btn-primary { background: var(--secondary); color: #fff; padding: 14px 28px; border-radius: 6px; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 10px; }
+    .btn-secondary { background: transparent; color: #fff; border: 1px solid #475569; padding: 14px 28px; border-radius: 6px; text-decoration: none; font-weight: 600; }
+    .btn-secondary:hover { border-color: #fff; }
 
-    .hero h1 {
-      font-size: 48px;
-      margin-bottom: 20px;
-      line-height: 1.2;
-    }
-
-    .hero p {
-      font-size: 20px;
-      margin-bottom: 30px;
-      opacity: 0.95;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 15px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 12px 30px;
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
-      transition: all 0.3s;
-      font-weight: 600;
-      display: inline-block;
-    }
-
-    .btn-primary {
-      background: white;
-      color: #0ea5a4;
-    }
-
-    .btn-primary:hover {
-      background: #f0f0f0;
-      transform: translateY(-2px);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: white;
-      border: 2px solid white;
-    }
-
-    .btn-secondary:hover {
-      background: white;
-      color: #0ea5a4;
-    }
-
-    /* Stats Section */
-    .stats {
-      background: white;
-      padding: 60px 20px;
-    }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 30px;
-      text-align: center;
-    }
-
-    .stat-item h3 {
-      font-size: 36px;
-      color: #0ea5a4;
-      margin-bottom: 10px;
-    }
-
-    .stat-item p {
-      color: #666;
-      font-size: 16px;
-    }
+    /* Trust Metrics Strip */
+    .metrics-strip { background: var(--light-bg); border-bottom: 1px solid #E2E8F0; padding: 30px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; text-align: center; }
+    .metric-item h3 { font-size: 2.2rem; font-weight: 800; color: var(--primary); }
+    .metric-item p { font-size: 0.9rem; color: #64748B; font-weight: 600; text-transform: uppercase; }
 
     /* Services Section */
-    .services {
-      padding: 80px 20px;
-      background: white;
-    }
+    .services { padding: 90px 5%; }
+    .section-title { text-align: center; max-width: 700px; margin: 0 auto 60px; }
+    .section-title h2 { font-size: 2.2rem; font-weight: 800; color: var(--primary); margin-bottom: 15px; }
+    .section-title p { color: #64748B; font-size: 1rem; }
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+    .service-card { background: #fff; border: 1px solid #E2E8F0; border-radius: 10px; padding: 35px 25px; transition: 0.3s; position: relative; }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05); border-color: var(--secondary); }
+    .service-icon { width: 55px; height: 55px; background: rgba(37, 99, 235, 0.1); color: var(--secondary); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 20px; }
+    .service-card h3 { font-size: 1.25rem; font-weight: 700; color: var(--primary); margin-bottom: 12px; }
+    .service-card p { color: #64748B; font-size: 0.95rem; margin-bottom: 15px; }
+    .service-card ul { list-style: none; padding-left: 0; }
+    .service-card ul li { font-size: 0.85rem; color: var(--text-main); font-weight: 600; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; }
+    .service-card ul li::before { content: "✓"; color: var(--secondary); font-weight: 800; }
 
-    .section-title {
-      text-align: center;
-      font-size: 36px;
-      margin-bottom: 50px;
-      color: #333;
-    }
+    /* SITC Methodology Section */
+    .sitc-section { background: var(--primary); color: #fff; padding: 90px 5%; }
+    .sitc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 50px; }
+    .sitc-step { background: var(--dark-card); padding: 30px 20px; border-radius: 8px; border-left: 4px solid var(--secondary); position: relative; }
+    .sitc-num { font-size: 2.5rem; font-weight: 800; color: rgba(255, 255, 255, 0.1); position: absolute; right: 15px; top: 10px; }
+    .sitc-step h4 { font-size: 1.1rem; margin-bottom: 10px; color: #fff; }
+    .sitc-step p { font-size: 0.85rem; color: var(--text-light); }
 
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
+    /* OEM Partners Bar */
+    .partners { padding: 60px 5%; background: var(--light-bg); text-align: center; border-top: 1px solid #E2E8F0; border-bottom: 1px solid #E2E8F0; }
+    .partners h4 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1.5px; color: #64748B; margin-bottom: 30px; }
+    .partner-logos { display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap; opacity: 0.7; font-weight: 800; font-size: 1.2rem; color: #475569; }
 
-    .service-card {
-      background: white;
-      padding: 30px;
-      border-radius: 8px;
-      text-align: center;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-      transition: all 0.3s;
-      border: 1px solid #e5e7eb;
-    }
-
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-      border-color: #0ea5a4;
-    }
-
-    .service-icon {
-      font-size: 48px;
-      margin-bottom: 15px;
-    }
-
-    .service-card h3 {
-      font-size: 20px;
-      margin-bottom: 12px;
-      color: #0ea5a4;
-    }
-
-    .service-card p {
-      color: #666;
-      line-height: 1.8;
-      font-size: 15px;
-    }
-
-    /* Projects Section */
-    .projects {
-      padding: 80px 20px;
-      background: #f9fafb;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-    }
-
-    .project-card {
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-      transition: all 0.3s;
-    }
-
-    .project-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-    }
-
-    .project-image {
-      height: 200px;
-      background: linear-gradient(135deg, #0ea5a4 0%, #06b6d4 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      font-size: 14px;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .project-content {
-      padding: 20px;
-    }
-
-    .project-tag {
-      display: inline-block;
-      background: #0ea5a4;
-      color: white;
-      padding: 5px 12px;
-      border-radius: 20px;
-      font-size: 12px;
-      margin-bottom: 10px;
-      font-weight: 600;
-    }
-
-    .project-card h4 {
-      font-size: 18px;
-      margin-bottom: 8px;
-      color: #333;
-    }
-
-    .project-card p {
-      color: #666;
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    /* Contact Section */
-    .contact {
-      padding: 80px 20px;
-      background: white;
-    }
-
-    .contact-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      align-items: start;
-    }
-
-    .contact-info h2 {
-      font-size: 32px;
-      margin-bottom: 20px;
-      color: #333;
-    }
-
-    .contact-info p {
-      color: #666;
-      line-height: 1.8;
-      margin-bottom: 30px;
-      font-size: 16px;
-    }
-
-    .contact-item {
-      display: flex;
-      gap: 15px;
-      margin-bottom: 25px;
-    }
-
-    .contact-item-icon {
-      font-size: 24px;
-      color: #0ea5a4;
-      flex-shrink: 0;
-    }
-
-    .contact-item-text h3 {
-      font-size: 16px;
-      margin-bottom: 5px;
-      color: #333;
-    }
-
-    .contact-item-text p {
-      margin: 0;
-      color: #666;
-    }
-
-    .contact-item-text a {
-      color: #0ea5a4;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .contact-item-text a:hover {
-      text-decoration: underline;
-    }
-
-    /* Contact Form */
-    .contact-form {
-      background: #f9fafb;
-      padding: 40px;
-      border-radius: 8px;
-      border: 1px solid #e5e7eb;
-    }
-
-    .contact-form h3 {
-      font-size: 24px;
-      margin-bottom: 25px;
-      color: #333;
-    }
-
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 600;
-      color: #333;
-      font-size: 14px;
-    }
-
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      font-size: 14px;
-      font-family: inherit;
-      transition: all 0.3s;
-    }
-
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      outline: none;
-      border-color: #0ea5a4;
-      box-shadow: 0 0 0 3px rgba(14, 165, 164, 0.1);
-    }
-
-    .form-group textarea {
-      min-height: 120px;
-      resize: vertical;
-    }
-
-    .form-button {
-      width: 100%;
-      padding: 14px;
-      background: linear-gradient(135deg, #0ea5a4 0%, #06b6d4 100%);
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s;
-    }
-
-    .form-button:hover:not(:disabled) {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 16px rgba(14, 165, 164, 0.3);
-    }
-
-    .form-button:disabled {
-      opacity: 0.7;
-      cursor: not-allowed;
-    }
-
-    .form-message {
-      margin-top: 15px;
-      padding: 15px;
-      border-radius: 5px;
-      display: none;
-      font-weight: 500;
-    }
-
-    .form-message.success {
-      background: #d4edda;
-      color: #155724;
-      border: 1px solid #c3e6cb;
-      display: block;
-    }
-
-    .form-message.error {
-      background: #f8d7da;
-      color: #721c24;
-      border: 1px solid #f5c6cb;
-      display: block;
-    }
+    /* RFQ / BoQ Submission Section */
+    .rfp-section { padding: 90px 5%; background: #fff; }
+    .rfp-container { max-width: 900px; margin: 0 auto; background: var(--light-bg); border: 1px solid #CBD5E1; border-radius: 12px; padding: 40px; }
+    .rfp-header { text-align: center; margin-bottom: 30px; }
+    .rfp-header h3 { font-size: 1.8rem; font-weight: 800; color: var(--primary); }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    .form-group.full { grid-column: span 2; }
+    .form-group label { font-size: 0.85rem; font-weight: 700; color: var(--primary); }
+    .form-group input, .form-group select, .form-group textarea { padding: 12px; border: 1px solid #CBD5E1; border-radius: 6px; font-size: 0.95rem; outline: none; }
+    .form-group input:focus { border-color: var(--secondary); }
+    .file-upload { border: 2px dashed #CBD5E1; background: #fff; padding: 25px; text-align: center; border-radius: 6px; cursor: pointer; }
+    .file-upload i { font-size: 1.8rem; color: var(--secondary); margin-bottom: 8px; }
 
     /* Footer */
-    footer {
-      background: #1f2937;
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-    }
+    footer { background: var(--primary); color: var(--text-light); padding: 60px 5% 30px; font-size: 0.9rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; margin-bottom: 40px; }
+    .footer-col h4 { color: #fff; margin-bottom: 20px; font-size: 1rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col a { color: var(--text-light); text-decoration: none; }
+    .footer-bottom { border-top: 1px solid #1e293b; padding-top: 25px; text-align: center; font-size: 0.8rem; }
 
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 30px;
-      justify-content: center;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-    }
-
-    .footer-links a {
-      color: white;
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-
-    .footer-links a:hover {
-      color: #0ea5a4;
-    }
-
-    .footer-bottom {
-      border-top: 1px solid #444;
-      padding-top: 20px;
-      color: #999;
-    }
-
-    /* Responsive */
     @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero h1 {
-        font-size: 32px;
-      }
-
-      .hero p {
-        font-size: 16px;
-      }
-
-      .contact-wrapper {
-        grid-template-columns: 1fr;
-      }
-
-      .stats-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .services-grid,
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .footer-links {
-        gap: 15px;
-        flex-direction: column;
-      }
+      .hero h1 { font-size: 2.2rem; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-group.full { grid-column: span 1; }
+      .footer-grid { grid-template-columns: 1fr; }
+      nav ul { display: none; }
     }
   </style>
 </head>
 <body>
 
-<!-- Header -->
-<header>
-  <nav class="container">
-    <div class="logo">Pal Electrical Systems</div>
-    <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="http://shop.palelectricalsystems.com" target="_blank">Shop</a></li>
-    </ul>
-  </nav>
-</header>
-
-<!-- Hero Section -->
-<section class="hero">
-  <div class="container">
-    <h1>Advanced Electrical & ELV Solutions</h1>
-    <p>Complete infrastructure solutions for electrical, networking, fire safety, security and solar systems</p>
-    <div class="hero-buttons">
-      <a href="#contact" class="btn btn-primary">Get Quote</a>
-      <a href="#services" class="btn btn-secondary">Explore Services</a>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div>
+      <span class="fsai-badge"><i class="fa-solid fa-shield-halved"></i> FSAI MEMBER</span>
+      <span style="margin-left: 10px;">Fire & Security Association of India Reg. Integrator</span>
+    </div>
+    <div>
+      <a href="tel:+917876901001"><i class="fa-solid fa-phone"></i> +91 78769 01001</a>
+      <a href="mailto:palelectricalsystems@gmail.com"><i class="fa-solid fa-envelope"></i> palelectricalsystems@gmail.com</a>
     </div>
   </div>
-</section>
 
-<!-- Stats Section -->
-<section class="stats">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item">
-        <h3>500+</h3>
-        <p>Projects Completed</p>
+  <!-- Header Navigation -->
+  <header>
+    <div class="logo">PAL <span>ELECTRICAL SYSTEMS</span></div>
+    <nav>
+      <ul>
+        <li><a href="#services">ELV Solutions</a></li>
+        <li><a href="#sitc">Execution Workflow</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#partners">OEM Partners</a></li>
+        <li><a href="http://shop.palelectricalsystems.com" target="_blank" style="color: var(--accent);"><i class="fa-solid fa-cart-shopping"></i> Retail Shop</a></li>
+        <li><a href="#rfp" class="btn-rfp">Submit BoQ / RFP</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-tag">
+        <i class="fa-solid fa-building-user"></i> Turnkey IT, Safety & Building Automation Systems
       </div>
-      <div class="stat-item">
-        <h3>15+</h3>
-        <p>Years Experience</p>
-      </div>
-      <div class="stat-item">
-        <h3>50+</h3>
-        <p>Expert Team</p>
-      </div>
-      <div class="stat-item">
-        <h3>99%</h3>
-        <p>Client Satisfaction</p>
+      <h1>Enterprise-Grade IT & ELV Infrastructure Integration</h1>
+      <p>Specialized in SITC (Supply, Installation, Testing & Commissioning) for Addressable Fire Safety, IP Surveillance, Enterprise Networking, and Smart Building Automation across Rajasthan.</p>
+      <div class="hero-btns">
+        <a href="#rfp" class="btn-primary"><i class="fa-solid fa-file-contract"></i> Submit Project BoQ</a>
+        <a href="#services" class="btn-secondary">Explore ELV Services</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Services Section -->
-<section class="services" id="services">
-  <div class="container">
-    <h2 class="section-title">Our Services</h2>
+  <!-- Metrics / Credibility Bar -->
+  <div class="metrics-strip">
+    <div class="metric-item">
+      <h3>500+</h3>
+      <p>Projects Executed</p>
+    </div>
+    <div class="metric-item">
+      <h3>FSAI</h3>
+      <p>Corporate Member</p>
+    </div>
+    <div class="metric-item">
+      <h3>15+</h3>
+      <p>Years Integration Experience</p>
+    </div>
+    <div class="metric-item">
+      <h3>100%</h3>
+      <p>NBC 2016 Compliant</p>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <div class="section-title">
+      <h2>Turnkey IT & ELV Solutions</h2>
+      <p>Engineering low-voltage systems engineered to international standards for commercial, hospitality, and industrial facilities.</p>
+    </div>
+
     <div class="services-grid">
+      
+      <!-- 1. Life Safety -->
       <div class="service-card">
-        <div class="service-icon">⚡</div>
-        <h3>Electrical Systems</h3>
-        <p>Power distribution, LT/HT panels, lighting design, earthing, protection systems and emergency backup for critical infrastructure</p>
+        <div class="service-icon"><i class="fa-solid fa-fire-extinguisher"></i></div>
+        <h3>Fire Safety & Life Safety Systems</h3>
+        <p>FSAI-guided design and deployment of life safety infrastructure compliant with NBC 2016 regulations.</p>
+        <ul>
+          <li>Addressable Fire Detection & Alarm Systems (FDAS)</li>
+          <li>Voice Evacuation & Emergency PA Systems</li>
+          <li>Gas Suppression Integration</li>
+        </ul>
       </div>
+
+      <!-- 2. Security & Surveillance -->
       <div class="service-card">
-        <div class="service-icon">🔌</div>
-        <h3>ELV Systems</h3>
-        <p>Structured cabling, access control, PA/VA systems, BMS integration and low-voltage automation for modern buildings</p>
+        <div class="service-icon"><i class="fa-solid fa-video"></i></div>
+        <h3>IP Surveillance & Security</h3>
+        <p>Enterprise-scale electronic security setups with centralized monitoring and AI video analytics.</p>
+        <ul>
+          <li>IP Camera Systems & Command Control Setup</li>
+          <li>Perimeter Intrusion Detection Systems (PIDS)</li>
+          <li>Automatic Number Plate Recognition (ANPR)</li>
+        </ul>
       </div>
+
+      <!-- 3. Access Control -->
       <div class="service-card">
-        <div class="service-icon">🌐</div>
-        <h3>IT & Networking</h3>
-        <p>Enterprise LAN/WiFi, fiber backbones, network switching, security infrastructure and cloud connectivity solutions</p>
+        <div class="service-icon"><i class="fa-solid fa-id-card-clip"></i></div>
+        <h3>Access & Perimeter Management</h3>
+        <p>Biometric and identity systems for high-security commercial and industrial entry points.</p>
+        <ul>
+          <li>Touchless Biometric & RFID Access Control</li>
+          <li>Boom Barriers & Turnstile Gate Integration</li>
+          <li>Visitor Management Software (VMS)</li>
+        </ul>
       </div>
+
+      <!-- 4. IT & Networking -->
       <div class="service-card">
-        <div class="service-icon">🚨</div>
-        <h3>Fire & Life Safety</h3>
-        <p>Addressable fire detection, voice evacuation systems, emergency lighting and life safety planning to global standards</p>
+        <div class="service-icon"><i class="fa-solid fa-network-wired"></i></div>
+        <h3>IT & Structured Cabling</h3>
+        <p>High-speed, certified data network backbones designed for zero downtime and maximum throughput.</p>
+        <ul>
+          <li>Fiber Optic Backbones & Optical Splicing</li>
+          <li>CAT6A Structured Cabling & Server Racks</li>
+          <li>Enterprise Wi-Fi & Switching Infrastructure</li>
+        </ul>
       </div>
+
+      <!-- 5. BMS & Automation -->
       <div class="service-card">
-        <div class="service-icon">📹</div>
-        <h3>Security Solutions</h3>
-        <p>CCTV systems, access control, perimeter security, monitoring centers and integrated threat detection</p>
+        <div class="service-icon"><i class="fa-solid fa-microchip"></i></div>
+        <h3>BMS & Energy Automation</h3>
+        <p>Centralized monitoring for smart facilities to reduce operational carbon footprint and power costs.</p>
+        <ul>
+          <li>Building Management Systems (BMS)</li>
+          <li>Energy Monitoring & Smart Metering</li>
+          <li>Commercial Rooftop Solar Integration (up to 500kW+)</li>
+        </ul>
       </div>
+
+      <!-- 6. PA & Intercom -->
       <div class="service-card">
-        <div class="service-icon">☀️</div>
-        <h3>Solar Energy</h3>
-        <p>Commercial rooftop solar, energy optimization, net-metering support and battery storage systems</p>
+        <div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div>
+        <h3>Public Address & AV Integration</h3>
+        <p>Clear acoustic and communication infrastructure for multi-building campuses and public spaces.</p>
+        <ul>
+          <li>IP-Based Public Address Systems</li>
+          <li>Boardroom AV & Sound Reinforcement</li>
+          <li>EPABX & IP Intercom Infrastructure</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SITC Methodology -->
+  <section class="sitc-section" id="sitc">
+    <div class="section-title" style="margin-bottom: 20px;">
+      <h2 style="color: #fff;">Our SITC Execution Framework</h2>
+      <p style="color: var(--text-light);">How we deliver guaranteed precision across high-value turnkey ELV contracts.</p>
+    </div>
+
+    <div class="sitc-grid">
+      <div class="sitc-step">
+        <div class="sitc-num">01</div>
+        <h4>Design & CAD Drafting</h4>
+        <p>Converting architectural CAD plans into loop layouts, conduit paths, and SLDs.</p>
+      </div>
+      <div class="sitc-step">
+        <div class="sitc-num">02</div>
+        <h4>Supply & Quality Check</h4>
+        <p>Procuring certified materials directly from Tier-1 OEM manufacturing partners.</p>
+      </div>
+      <div class="sitc-step">
+        <div class="sitc-num">03</div>
+        <h4>Installation & Cabling</h4>
+        <p>Structured installation executed by certified cable technicians under safety oversight.</p>
+      </div>
+      <div class="sitc-step">
+        <div class="sitc-num">04</div>
+        <h4>Testing & Commissioning</h4>
+        <p>Rigorous loop testing, signal check, software setup, and full system integration.</p>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Projects Section -->
-<section class="projects" id="projects">
-  <div class="container">
-    <h2 class="section-title">Featured Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-image">🏨 ITC Kufri Resort - Complete luxury resort infrastructure</div>
-        <div class="project-content">
-          <span class="project-tag">Hospitality</span>
-          <h4>ITC Kufri Resort</h4>
-          <p>Complete electrical and ELV systems for a luxury hill-station property including backup power, lighting design and access control</p>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-image">🏢 Enterprise Network Hub - Multi-building infrastructure</div>
-        <div class="project-content">
-          <span class="project-tag">Enterprise</span>
-          <h4>Enterprise Network Hub</h4>
-          <p>Fiber backbone infrastructure and enterprise-grade switching for multi-building commercial campus with 99.99% uptime</p>
-        </div>
-      </div>
-      <div class="project-card">
-        <div class="project-image">☀️ Rooftop Solar - 500kW installation with net-metering</div>
-        <div class="project-content">
-          <span class="project-tag">Renewable Energy</span>
-          <h4>Rooftop Solar Installation</h4>
-          <p>Commercial rooftop solar with energy management system and net-metering setup for a 500kW installation</p>
-        </div>
-      </div>
+  <!-- OEM Partners Section -->
+  <section class="partners" id="partners">
+    <h4>Integrated Hardware & Software Tier-1 Partners</h4>
+    <div class="partner-logos">
+      <span>HIKVISION</span> • 
+      <span>HONEYWELL</span> • 
+      <span>SCHNEIDER ELECTRIC</span> • 
+      <span>BOSCH</span> • 
+      <span>LEGRAND</span> • 
+      <span>COMMSCOPE</span> • 
+      <span>CP PLUS</span>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Contact Section -->
-<section class="contact" id="contact">
-  <div class="container">
-    <h2 class="section-title">Get in Touch</h2>
-    <div class="contact-wrapper">
-      <div class="contact-info">
-        <h2>Contact Information</h2>
-        <p>Have a project in mind? We'd love to hear about it. Get in touch with us and let's discuss how we can help bring your vision to life.</p>
-        
-        <div class="contact-item">
-          <div class="contact-item-icon">📞</div>
-          <div class="contact-item-text">
-            <h3>Phone</h3>
-            <p><a href="tel:+917876901001">+91 78769 01001</a></p>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-item-icon">✉️</div>
-          <div class="contact-item-text">
-            <h3>Email</h3>
-            <p><a href="mailto:palelectricalsystems@gmail.com">palelectricalsystems@gmail.com</a></p>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-item-icon">📍</div>
-          <div class="contact-item-text">
-            <h3>Address</h3>
-            <p>Jagatpura, Jaipur, Rajasthan, India</p>
-          </div>
-        </div>
+  <!-- RFP / BoQ Submission Form -->
+  <section class="rfp-section" id="rfp">
+    <div class="rfp-container">
+      <div class="rfp-header">
+        <h3>Submit Your Project BoQ / Tender RFQ</h3>
+        <p style="color: #64748B; font-size: 0.95rem; margin-top: 5px;">Architects, MEP Consultants, and General Contractors can upload drawings or BoQs directly to our estimation engineering team.</p>
       </div>
 
-      <form class="contact-form" id="contactForm">
-        <h3>Send us a Message</h3>
-        
-        <div class="form-group">
-          <label for="name">Your Name *</label>
-          <input type="text" id="name" name="name" required>
+      <form>
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Full Name *</label>
+            <input type="text" placeholder="e.g., Rajesh Sharma" required>
+          </div>
+          <div class="form-group">
+            <label>Company / Firm Name *</label>
+            <input type="text" placeholder="e.g., Studio Architects / MEP Corp" required>
+          </div>
+          <div class="form-group">
+            <label>Phone Number *</label>
+            <input type="tel" placeholder="+91 78769 01001" required>
+          </div>
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" placeholder="name@company.com" required>
+          </div>
+          <div class="form-group full">
+            <label>Project Type</label>
+            <select>
+              <option>Commercial High-Rise / Office Building</option>
+              <option>Hotel / Hospitality / Resort</option>
+              <option>Industrial Plant / Warehouse</option>
+              <option>Hospital / Healthcare Facility</option>
+              <option>Educational Campus</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label>Attach CAD Drawings / BoQ / RFP Document (PDF, ZIP, DWG)</label>
+            <div class="file-upload">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+              <p style="font-weight: 600; font-size: 0.9rem;">Click or drag file here to upload project documents</p>
+              <span style="font-size: 0.75rem; color: #94A3B8;">Max file size: 25MB</span>
+            </div>
+          </div>
+          <div class="form-group full">
+            <label>Project Scope / Additional Notes</label>
+            <textarea rows="4" placeholder="Briefly specify sub-systems required (e.g., Fire Alarm, 200 IP Cameras, Fiber Backbone)"></textarea>
+          </div>
+          <div class="form-group full">
+            <button type="submit" class="btn-primary" style="justify-content: center; width: 100%; border: none; cursor: pointer; font-size: 1rem;">
+              <i class="fa-solid fa-paper-plane"></i> Request Technical Proposal & Quote
+            </button>
+          </div>
         </div>
-
-        <div class="form-group">
-          <label for="email">Email Address *</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone">
-        </div>
-
-        <div class="form-group">
-          <label for="service">Service Type *</label>
-          <select id="service" name="service" required>
-            <option value="">Select a service</option>
-            <option value="Electrical Systems">Electrical Systems</option>
-            <option value="ELV Systems">ELV Systems</option>
-            <option value="IT & Networking">IT & Networking</option>
-            <option value="Fire & Life Safety">Fire & Life Safety</option>
-            <option value="Security Solutions">Security Solutions</option>
-            <option value="Solar Energy">Solar Energy</option>
-            <option value="Multiple Services">Multiple Services</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="message">Project Details *</label>
-          <textarea id="message" name="message" required placeholder="Tell us about your project scope, timeline, and requirements..."></textarea>
-        </div>
-
-        <button type="submit" class="form-button" id="submitBtn">Send Inquiry</button>
-        <div class="form-message" id="formMessage"></div>
       </form>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Footer -->
-<footer>
-  <div class="footer-content">
-    <div class="footer-links">
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-      <a href="#">Privacy Policy</a>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <h3 style="color: #fff; margin-bottom: 15px; font-weight: 800;">PAL ELECTRICAL SYSTEMS</h3>
+        <p style="margin-bottom: 15px;">Turnkey IT & Extra Low Voltage (ELV) System Integrators delivering advanced security, networking, life safety, and solar solutions.</p>
+        <p style="color: var(--accent); font-weight: 700;"><i class="fa-solid fa-shield-halved"></i> Member - Fire & Security Association of India (FSAI)</p>
+      </div>
+      <div class="footer-col">
+        <h4>ELV Solutions</h4>
+        <ul>
+          <li><a href="#services">Fire Detection (FDAS)</a></li>
+          <li><a href="#services">IP Surveillance & Analytics</a></li>
+          <li><a href="#services">Structured Data Cabling</a></li>
+          <li><a href="#services">Biometric Access Control</a></li>
+          <li><a href="#services">BMS & Automation</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#sitc">Execution Framework</a></li>
+          <li><a href="#partners">OEM Partners</a></li>
+          <li><a href="#rfp">Submit BoQ</a></li>
+          <li><a href="http://shop.palelectricalsystems.com" target="_blank">Retail Shop</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact HQ</h4>
+        <p style="margin-bottom: 8px;"><i class="fa-solid fa-location-dot"></i> Jagatpura, Jaipur, Rajasthan, India</p>
+        <p style="margin-bottom: 8px;"><i class="fa-solid fa-phone"></i> +91 78769 01001</p>
+        <p><i class="fa-solid fa-envelope"></i> palelectricalsystems@gmail.com</p>
+      </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Pal Electrical Systems. All rights reserved.</p>
+      © 2026 Pal Electrical Systems. All rights reserved. | IT & ELV Engineering Division
     </div>
-  </div>
-</footer>
-
-<script>
-  // Initialize EmailJS
-  emailjs.init("tl2eQNrfaYHOaQ0o4");
-
-  // Handle form submission
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const submitBtn = document.getElementById('submitBtn');
-    const formMessage = document.getElementById('formMessage');
-    
-    // Get form data
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const service = document.getElementById('service').value;
-    const message = document.getElementById('message').value;
-
-    // Disable button
-    submitBtn.disabled = true;
-    submitBtn.textContent = 'Sending...';
-
-    // Prepare data for EmailJS
-    const templateParams = {
-      to_email: 'palelectricalsystems@gmail.com',
-      from_name: name,
-      from_email: email,
-      phone: phone,
-      service: service,
-      message: message
-    };
-
-    // Send email
-    emailjs.send('tl2eQNrfaYHOaQ0o4', 'template_ybuuh7y', templateParams)
-      .then(() => {
-        // Success
-        formMessage.textContent = '✓ Thank you! Your inquiry has been sent successfully. We\'ll get back to you within 24 hours.';
-        formMessage.classList.remove('error');
-        formMessage.classList.add('success');
-        
-        // Reset form
-        document.getElementById('contactForm').reset();
-        
-        // Re-enable button
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Inquiry';
-
-        // Clear message after 5 seconds
-        setTimeout(() => {
-          formMessage.classList.remove('success');
-        }, 5000);
-      })
-      .catch((error) => {
-        // Error
-        console.error('Error:', error);
-        formMessage.textContent = '✗ Error sending message. Please try again or contact us directly at +91 78769 01001';
-        formMessage.classList.remove('success');
-        formMessage.classList.add('error');
-        
-        // Re-enable button
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Inquiry';
-
-        // Clear message after 5 seconds
-        setTimeout(() => {
-          formMessage.classList.remove('error');
-        }, 5000);
-      });
-  });
-</script>
+  </footer>
 
 </body>
 </html>
