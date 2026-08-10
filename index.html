@@ -120,6 +120,29 @@
       .footer-grid { grid-template-columns: 1fr; }
       nav ul { display: none; }
     }
+
+    .file-upload {
+  border: 2px dashed #CBD5E1;
+  background: #FFFFFF;
+  padding: 25px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Hover & Active Drag-and-Drop States */
+.file-upload:hover,
+.file-upload.highlight {
+  border-color: #2563EB;
+  background-color: #F0F6FF;
+}
+
+.file-upload i {
+  font-size: 2rem;
+  color: #2563EB;
+  margin-bottom: 8px;
+}
   </style>
 </head>
 <body>
@@ -354,14 +377,22 @@
               <option>Educational Campus</option>
             </select>
           </div>
-          <div class="form-group full">
-            <label>Attach CAD Drawings / BoQ / RFP Document (PDF, ZIP, DWG)</label>
-            <div class="file-upload">
-              <i class="fa-solid fa-cloud-arrow-up"></i>
-              <p style="font-weight: 600; font-size: 0.9rem;">Click or drag file here to upload project documents</p>
-              <span style="font-size: 0.75rem; color: #94A3B8;">Max file size: 25MB</span>
-            </div>
-          </div>
+        <div class="form-group full">
+  <label for="attachment">Attach CAD Drawings / BoQ / RFP Document (PDF, ZIP, DWG)</label>
+  
+  <!-- The file upload box container -->
+  <div class="file-upload" id="drop-area">
+    <i class="fa-solid fa-cloud-arrow-up"></i>
+    <p style="font-weight: 600; font-size: 0.9rem;" id="upload-text">Click or drag file here to upload project documents</p>
+    <span style="font-size: 0.75rem; color: #94A3B8;">Max file size: 25MB (.pdf, .zip, .dwg, .xlsx)</span>
+    
+    <!-- Hidden file input linked to Web3Forms -->
+    <input type="file" id="attachment" name="attachment" accept=".pdf,.zip,.dwg,.xlsx" style="display: none;">
+  </div>
+
+  <!-- Shows the selected file name -->
+  <div id="file-info" style="margin-top: 8px; font-size: 0.85rem; color: #2563EB; font-weight: 600; display: none;"></div>
+</div>
           <div class="form-group full">
             <label>Project Scope / Additional Notes</label>
             <textarea rows="4" placeholder="Briefly specify sub-systems required (e.g., Fire Alarm, 200 IP Cameras, Fiber Backbone)"></textarea>
@@ -414,6 +445,70 @@
       © 2026 Pal Electrical Systems. All rights reserved. | IT & ELV Engineering Division
     </div>
   </footer>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const dropArea = document.getElementById('drop-area');
+    const fileInput = document.getElementById('attachment');
+    const fileInfo = document.getElementById('file-info');
+    const uploadText = document.getElementById('upload-text');
 
+    // 1. Click on the box to trigger the hidden file input
+    dropArea.addEventListener('click', () => fileInput.click());
+
+    // 2. Highlight box when dragging files over it
+    ['dragenter', 'dragover'].forEach(eventName => {
+      dropArea.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        dropArea.classList.add('highlight');
+      }, false);
+    });
+
+    ['dragleave', 'drop'].forEach(eventName => {
+      dropArea.addEventListener(eventName, (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        dropArea.classList.remove('highlight');
+      }, false);
+    });
+
+    // 3. Handle File Drop
+    dropArea.addEventListener('drop', (e) => {
+      const dt = e.dataTransfer;
+      const files = dt.files;
+
+      if (files.length > 0) {
+        fileInput.files = files; // Assign dropped file to the input element
+        updateFileInfo(files[0]);
+      }
+    });
+
+    // 4. Handle File Select via File Picker
+    fileInput.addEventListener('change', function () {
+      if (this.files.length > 0) {
+        updateFileInfo(this.files[0]);
+      }
+    });
+
+    // Helper Function: Validate size and update UI
+    function updateFileInfo(file) {
+      const maxSizeInMB = 25;
+      const fileSizeMB = file.size / (1024 * 1024);
+
+      if (fileSizeMB > maxSizeInMB) {
+        alert(`File size exceeds ${maxSizeInMB}MB. Please choose a smaller file.`);
+        fileInput.value = ''; // Reset file input
+        fileInfo.style.display = 'none';
+        uploadText.innerText = 'Click or drag file here to upload project documents';
+        return;
+      }
+
+      // Display file name and size
+      fileInfo.style.display = 'block';
+      fileInfo.innerHTML = `<i class="fa-solid fa-paperclip"></i> Selected: <strong>${file.name}</strong> (${fileSizeMB.toFixed(2)} MB)`;
+      uploadText.innerText = 'Change file...';
+    }
+  });
+</script>
 </body>
 </html>
